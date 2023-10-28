@@ -12,6 +12,7 @@ module.exports = (sequelize) => {
     nombre: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique:true,
     },
     imagen:{
       type:DataTypes.STRING,
@@ -31,12 +32,15 @@ module.exports = (sequelize) => {
     },
     velocidad:{
       type:DataTypes.FLOAT,
+      defaultValue:0,
     },
     altura:{
       type:DataTypes.FLOAT,
+      defaultValue:0,
     },
     peso:{
       type:DataTypes.FLOAT,
+      defaultValue:0,
     },
 
 
