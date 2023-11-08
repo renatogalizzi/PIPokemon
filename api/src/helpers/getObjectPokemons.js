@@ -1,19 +1,29 @@
-const getObjectPokemons = (urlsPending) => {
+const getObjectPokemons = (data) => {
 
+    const getTypes = (types) =>{
+        let type = [];
+        for (let i=0;i<types.length;i++){
+            type.push({nombre:types[i].type.name})
+        }
+        return type;
+        }
+    
     let info = [];
-        for (let i=0;i<urlsPending.length;i++){
+        for (let i=0;i<data.length;i++){
             let objPokemons = {
-                id:urlsPending[i].id,
-                nombre:urlsPending[i].name,
-                imagen:urlsPending[i].sprites.other.home.front_default,
-                vida:urlsPending[i].base_experience,
-                ataque:urlsPending[i].stats[1].base_stat,
-                defensa:urlsPending[i].stats[2].base_stat,
-                velocidad:urlsPending[i].stats[5].base_stat,
-                altura:urlsPending[i].height,
-                peso:urlsPending[i].base_experience
+                id:data[i].id,
+                nombre:data[i].name,
+                imagen:data[i].sprites.other.home.front_default,
+                vida:data[i].base_experience,
+                ataque:data[i].stats[1].base_stat,
+                defensa:data[i].stats[2].base_stat,
+                velocidad:data[i].stats[5].base_stat,
+                altura:data[i].height,
+                peso:data[i].base_experience,
+                typePokemons:getTypes(data[i].types),
             }
             info.push(objPokemons)
+            
         }
          return info;
 };

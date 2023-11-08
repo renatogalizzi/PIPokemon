@@ -1,0 +1,35 @@
+
+.divCard{
+border: 2px solid rgb(112, 117, 168);
+max-width:180px;
+min-width: 180px;
+list-style: none;
+backdrop-filter:blur(10px);
+display:flex;
+flex-direction:column;
+border-radius:10px;
+font-size:small;
+box-shadow: 0 0 15px #738512;
+height: 280px;
+min-height: 280px;
+}
+
+.divCard:hover{
+    transform: scale(1.1);
+    box-shadow:  0 0 30px 2px rgba(243, 237, 237, 0.5);
+}
+
+.divCard h2 {
+color:rgb(80, 56, 54);
+font-size:large;
+margin:6px;
+text-decoration-line: none;
+}
+
+.divCard h4 {
+font-size: 20px;
+font-family: pokemon;
+}
+.h1nombre{
+    text-decoration:double;
+}

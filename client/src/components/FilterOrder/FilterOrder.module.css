@@ -1,0 +1,14 @@
+button{
+    border-radius: 25px;
+    margin:2px;
+}
+
+.type {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #9fe0e9;
+    border-radius: 5px;
+    border-color: #0882c9;
+  }
+

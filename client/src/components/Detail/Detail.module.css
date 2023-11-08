@@ -1,0 +1,21 @@
+.container {
+    display:flex;
+    justify-content:center;
+        /* border:1px solid rgb(10, 9, 9); */
+    max-width: 90vw;
+    max-height: 80vw ;
+    font-family:  sans-serif;
+                                                
+        
+}
+.data{
+    margin:100px;
+}
+.data h2{
+    font-size: large;}
+
+
+.imagenDetail{
+/* border:1px solid black; */
+width: 50%;
+}

@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-// data ={ name : name
+// data.results ={ name : name
 //          url: url}
 const getUrlsApi = async ({results}) => { //{results}=data que viene de la api x AXIOS.
   let values = [];

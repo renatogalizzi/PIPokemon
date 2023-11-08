@@ -1,0 +1,38 @@
+.button{
+    background:#dddf66;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    align-items: center;
+    justify-content:center;
+    cursor:pointer;
+
+    }
+
+.input{
+    font-size: 1.1em;
+    background-color: #ddd;
+    border: 3px solid rgb(52, 135, 202);
+    border-radius: 6px;
+    padding: 4px;
+    width: 300px;
+    box-shadow: 0 0 20px rgb(226, 233, 226);
+    margin:10px 20px;
+    }
+
+
+
+
+
+.input:hover{
+    border-color: #dddf66;
+    color:rgb(121, 19, 16);
+}
+
+.navButton:hover{
+    transform: scale(1.1);   
+    color:rgb(121, 19, 16);
+}
