@@ -7,23 +7,22 @@ import { useState } from 'react';
 
 
 export default function FilterOrder() {
-  const [aux, setAux] = useState(false);
-  //  const pokemons = useSelector(state => state.pokemons)
-   const dispatch = useDispatch();
+const dispatch = useDispatch();
 
 const handleFilter = (e) =>{
+  e.preventDefault();
+  //console.log(e)
 dispatch(filterPokemons(e.target.value));
 
 }
 const handleOrder = (e) => {
   dispatch(orderPokemons(e.target.value));
-  setAux(!aux);
-  console.log(aux)
+  
 }
     return (
       <div>
         <b>Filtrar por Tipo:</b> <select name="type" className={style.type} onChange={handleFilter}>
-            <option value="">...</option>
+            <option value=" ">...</option>
             <option value="normal">Normal</option>
             <option value="fighting">Fighting</option>
             <option value="flying">Flying</option>

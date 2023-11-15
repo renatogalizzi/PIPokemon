@@ -1,3 +1,112 @@
 .divContainer{
-   border-color: 1px solid black;
+   display:flex;
+   height: 100vh;
+   flex-direction: column;
+   justify-content:center;
+   align-items: center;
+   background-color: rgba(206, 176, 224, 0.507);
+   width: 100wv;
+   
+}
+
+.divButtonImage{
+ display:flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ width: 40%;
+ height: 500px;
+ border-radius: 20px;
+ justify-content: center;
+ align-items: center;
+}
+
+/* .divButtonImage button{
+position: relative;
+top:-10px;
+z-index: 1;
+height: 100px;
+background-color: #dddf66;
+border:none;
+width: 100%;
+} */
+.divButtonImage a {
+   text-decoration: none;
+   font-size:25px;
+   color:rgb(51, 22, 22);
+}
+.divButtonImage img {
+   z-index: 2;
+   position:relative;
+   left:20px;
+   top:20px;
+}
+
+/* button:hover{
+   background-color: rgb(164, 219, 62);
+} */
+
+
+.ovbtnslideleft {
+   background: #dddf66; 
+   color: #13131a; 
+   border: 2px solid #353526; 
+   padding: 16px 50px;
+   border-radius: 8px; 
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   display: inline-block;
+ }
+ .ovbtnslideleft:hover {
+   color: #fff8f8; /* color de fuente hover */
+ }
+ .ovbtnslideleft::after {
+   content: "";
+   background: #e9e9ec; /* color de fondo hover */
+   position: absolute;
+   z-index: -1;
+   padding: 16px 20px;
+   display: block;
+   top: 0;
+   bottom: 0;
+   left: -100%;
+   right: 100%;
+   -webkit-transition: all 0.35s;
+   transition: all 0.35s;
+ }
+ .ovbtnslideleft:hover::after {
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   -webkit-transition: all 0.35s;
+   transition: all 0.35s;
+ }
+
+ .footer{
+   width: 100%;
+   padding-top: 20px;
+   display: flex;
+   flex-direction: column;
+   height: 250px;
+   justify-content: flex-end;
+   align-items: center;
+ }
+
+ .footer span:hover{
+  padding: 20px;
+  background-color: #dddf66;
+    }
+
+ .footer span{
+  background-color: rgba(240, 240, 169, 0.308);
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 20px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: pokemon-solid;
+  font-size: 30px;
 }

@@ -22,15 +22,15 @@ export const filterPokemons = (type)=>{
   return {type:FILTER_POKEMONS,payload:type}
 }
 
-export const createPokemons = (pokemon) =>{
-  const endpoint = "http://localhost:3001/pokemons/create";
-  return (dispatch) =>{
-    axios.post(endpoint,pokemon)
-    .then(res => dispatch({type:CREATE_POKEMONS,payload:res}))
-    
-}
+// export const createPokemons = (pokemon) =>{
+//   const endpoint = "http://localhost:3001/pokemons/create";
+//   return (dispatch) =>{
+//     axios.post(endpoint,pokemon)
+//     .then(res => dispatch({type:CREATE_POKEMONS,payload:res}))
+//     .catch(err => window.alert(err.message))
+// }
 
-}
+//}
 
 export const orderPokemons = (order) => {
   return {type:ORDER_POKEMONS,payload:order}

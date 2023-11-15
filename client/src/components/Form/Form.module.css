@@ -44,6 +44,8 @@
     height: 55px;
     display:flex;
     align-items: center;
+    flex-direction: column;
+    
 }
 
 .inputBox{
@@ -71,6 +73,8 @@
     font-size: 20px;
 }
 
+
+
 .inputs{
     border-radius: 10px;
     height: 30px;
@@ -95,18 +99,19 @@
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 
 .errors{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     position: absolute;
-    bottom:-20px;
-    right:100px;
-    width: auto;
-    margin-left: 5px;
+    bottom:-15px;
+    right:131px;
+    width: 190px;
     z-index: 100;
-
+    color:red;
+    
 }
 
 #tipoPadre{
@@ -127,4 +132,34 @@
 }
 #tipoContainer label {
     height: auto;
+}
+
+#errorAtaque{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    bottom:412px;
+    right:175px;
+    margin-left: 5px;
+    z-index: 100;
+    color:red;
+}
+
+#errorVida{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    bottom:460px;
+    right:175px;
+    margin-left: 5px;
+    z-index: 100;
+    color:red;
+}
+
+#campos{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:red;
+    font-size: larger;
+    background-color: #dddf66;
+    border-radius: 10px;
 }

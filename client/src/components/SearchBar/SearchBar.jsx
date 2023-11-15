@@ -14,6 +14,7 @@ export default function SearchBar() {
    }
    const handleSearch= (nombre)=>{
       dispatch(searchPokemon(nombre))
+      setNombre();
       }
   
    

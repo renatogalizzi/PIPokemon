@@ -10,10 +10,10 @@ import { getPokemons } from "./redux/actions";
 
 
 function App() {
-  const dispatch=useDispatch();
-  useEffect(() => {
-      dispatch(getPokemons());
-    }, []);
+  // const dispatch=useDispatch();
+  // useEffect(() => {
+  //     dispatch(getPokemons());
+  //   }, []);
 
   return (
     <div className="App">

@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import style from "./Form.module.css";
 import validation from "../../../../api/src/helpers/validation";
 import { useDispatch } from "react-redux";
-import {createPokemons} from "../../redux/actions"
-import {useNavigate}  from "react-router-dom";
+import { useNavigate }  from "react-router-dom";
+import axios from "axios";
 
 export default function Form() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+
+  // let type =[];
+  // const handleTypes = (e) => {
+  //   type.push(e.target.value);
+  //   console.log(type);
+  //   return type;
+  // }  
+
   const [pokeData, setPokeData] = useState({
     nombre: "",
     vida: "",
@@ -16,7 +23,7 @@ export default function Form() {
     velocidad: "",
     altura: "",
     peso: "",
-    types: [],
+    types:[],
     imagen: "",
   });
 
@@ -24,8 +31,14 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(createPokemons(pokeData));
-    navigate("/")
+    if(Object.keys(errors).length !== 0){
+      setErrors({general:"Faltan Campos obligatorios"});
+    }else{
+      const endpoint = "http://localhost:3001/pokemons/create";
+      axios.post(endpoint,pokeData)
+      .then(({data}) => {window.alert(data.message +" => "+ data.data),navigate("/home")})
+      .catch(error => window.alert(error.response.data.message))
+    }
   };
 
   const handleChange = (event) => {
@@ -67,6 +80,7 @@ export default function Form() {
                   onChange={handleChange}
                 ></input>
               </div>
+              <p id={style.errorVida}>{errors.vida}</p>
             </div>
             <div className={style.divLabels}>
               <div className={style.inputBox}>
@@ -79,6 +93,7 @@ export default function Form() {
                   onChange={handleChange}
                 ></input>
               </div>
+              <p id={style.errorAtaque}>{errors.ataque}</p>
             </div>
             <div className={style.divLabels}>
               <div className={style.inputBox}>
@@ -177,6 +192,7 @@ export default function Form() {
               Crear
             </button>
           </form>
+            <p id={style.campos}>{errors.general}</p>
         </div>
       </div>
     </div>

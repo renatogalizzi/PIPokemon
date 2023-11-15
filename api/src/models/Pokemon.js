@@ -32,7 +32,7 @@ module.exports = (sequelize) => {
     },
     velocidad:{
       type:DataTypes.FLOAT,
-      defaultValue:0,
+      defaultValue:null,
     },
     altura:{
       type:DataTypes.FLOAT,
