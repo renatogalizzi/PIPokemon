@@ -12,15 +12,22 @@ export default function SearchBar() {
    const handleChange = (event) => {
       setNombre(event.target.value);
    }
-   const handleSearch= (nombre)=>{
-      dispatch(searchPokemon(nombre))
-      setNombre();
+   const handleSearch= (nombre,e)=>{
+         dispatch(searchPokemon(nombre))
+            setNombre(); 
+         }
+      
+
+   const handleKeyPress = (e) => {
+         if (e.key === 'Enter') {
+           handleSearch(nombre)
+         }
       }
   
    
    return (
       <div>
-         <input type='search' onChange={handleChange} className={style.input} placeholder="Nombre..." />
+         <input type='search' onKeyPress={handleKeyPress} onChange={handleChange} className={style.input} placeholder="Nombre..." />
          <button className={style.button} onClick={()=>handleSearch(nombre)}>Buscar</button>
          <button className={style.button} onClick={()=>handleSearch()}>Reset</button>
          <Link to="/create">

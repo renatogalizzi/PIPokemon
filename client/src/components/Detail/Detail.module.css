@@ -39,6 +39,7 @@
     left:2px;
     width: 50%;
     align-self: center;
+    margin-right: 20px;
 }
 
 .imagenDetail img {
@@ -50,13 +51,18 @@ width: 50%;
 height: 100%;
 display:flex;
 flex-direction: column;
-justify-content: space-between;
+justify-content: center;
 }
 .data p{
     font-size:20px;
     display: flex;
-    justify-content: space-between;
-}
+    justify-content:center;
+    font-family: pokemon-solid;
+    background-color: rgba(128, 128, 128, 0.171);
+    width: auto;
+    border-radius: 10px;
+
+    }
 
 .button{
     background:#dddf66;

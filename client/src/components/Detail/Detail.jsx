@@ -43,7 +43,7 @@ export default function Detail () {
          </div>
          <div className={style.imagenyData}>
             <div className={style.imagenDetail}>
-               <img src={pokemon.imagen} alt={pokemon.name || "Image"}/>
+               <img src={pokemon.imagen} alt={pokemon.nombre + " Image"}/>
             </div>
             <div key={pokemon.id} className={style.data}>
                <p>ID : {pokemon.id}</p>

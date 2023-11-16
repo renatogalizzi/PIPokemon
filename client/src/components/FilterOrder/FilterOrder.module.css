@@ -10,5 +10,23 @@ button{
     background-color: #9fe0e9;
     border-radius: 5px;
     border-color: #0882c9;
+    margin-right: 10px;
   }
 
+  .type::-webkit-scrollbar {
+    width: 10px;
+    }
+
+  *::-webkit-scrollbar {
+    width: 30px;
+    }
+
+  *::-webkit-scrollbar-track {
+    background: #dddf66;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.349);
+    border-radius: 20px;
+    border: 3px solid #dddf66;
+  }

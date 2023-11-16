@@ -9,8 +9,8 @@ const getPokemons = async (req, res) => {
     const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=40`); //Recibo objetos tipo {name:"",url:""}
     if(!data){return res.status(404).json({message:"Fallo la conexion a la API Pokemon"})}
     const { name } = req.query;
-    const allDataApi = await getUrlsApi(data);
-    let objPokemons = getObjectPokemons(allDataApi);
+    const allDataApi = await getUrlsApi(data); //Hago peticion a todas las urls para tener info de los pokemons
+    let objPokemons = getObjectPokemons(allDataApi); //Model del object para enviar al front
     let bbdd = await searchInBBDD();
     
     for (let i=0;i<bbdd.length;i++){
