@@ -12,15 +12,6 @@ const reducer = (state = initialState, action) => {
         pokemons: action.payload,
         allPokemons:action.payload };
       
-    // case SEARCH_POKEMON:{
-    //   if(action.payload){
-    //   const filter = state.pokemons.filter(p=> p.nombre.toLowerCase() === action.payload.toLowerCase())
-    //   if(filter.length === 0) {window.alert("No hay pokemones con ese Nombre")}
-    //   else return {...state,allPokemons:filter}
-    //   }else {
-    //     return{...state,allPokemons:state.pokemons}
-    //   }
-    // }
 
     case FILTER_POKEMONS:
       if(action.payload === "api" || action.payload ==="bbdd"){
@@ -67,14 +58,8 @@ const reducer = (state = initialState, action) => {
               allPokemons:copyAllPoke}
 
       case SEARCH_POKEMON:
-
-      if(action.payload){
-      const filter = state.pokemons.filter(p=> p.nombre.toLowerCase() === action.payload.toLowerCase())
-      if(filter.length === 0) {window.alert("No hay pokemones con ese Nombre")}
-      else return {...state,allPokemons:filter}
-      }else {
-        return{...state,allPokemons:state.pokemons}
-      }
+        return{...state,allPokemons:action.payload}
+      
 
   default:
           return {...state};
@@ -84,3 +69,19 @@ const reducer = (state = initialState, action) => {
 };
 
 export default reducer;
+
+
+
+
+
+
+
+// Para usarlo con search en el estado global sin el server
+// case SEARCH_POKEMON:
+//       if(action.payload){
+//       const filter = state.pokemons.filter(p=> p.nombre.toLowerCase() === action.payload.toLowerCase())
+//       if(filter.length === 0) {window.alert("No hay pokemones con ese Nombre")}
+//       else return {...state,allPokemons:filter}
+//       }else {
+//         return{...state,allPokemons:state.pokemons}
+//       }

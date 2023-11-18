@@ -16,15 +16,15 @@ const createPokemon = async (req, res) => {
     } = req.body;
     if (!nombre || !imagen || !vida || !ataque || !defensa || !types) {throw Error ("Faltan Datos")
   }else {
-const pokemon = await Pokemon.create({   //Deberia llamar a un controller que haga la conexion con la bbdd
+const pokemon = await Pokemon.create({  
   nombre,
   imagen,
   vida,
   ataque,
   defensa,
-  velocidad,
-  altura,
-  peso,
+  velocidad: velocidad ? velocidad : 0,
+  altura: altura ? altura : 0,
+  peso: peso ? peso : 0
 });
 pokemon.addTypePokemon(types);
 res.status(200).json({ message: "Pokemon creado correctamente", data: pokemon.nombre });

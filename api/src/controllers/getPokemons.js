@@ -17,8 +17,8 @@ const getPokemons = async (req, res) => {
       objPokemons=[...objPokemons,bbdd[i].dataValues];
     }
     if(name) { 
-        let filter = filterQueryPokemons(obj,name);
-        if(!filter){
+        let filter = filterQueryPokemons(objPokemons,name);
+        if(Object.keys(filterPokemons).length === 0){
             return res.status(404).json({message:"No se encontraron Personajes con ese Nombre"})
         }else {
             return res.status(200).json(filter)
@@ -27,7 +27,7 @@ const getPokemons = async (req, res) => {
     else{
         res.status(200).json(objPokemons);
       }
-    }catch (err) {res.send(err.message)}
+    }catch (err) {res.status(404).send(err.message)}
 };
 
 module.exports = getPokemons;

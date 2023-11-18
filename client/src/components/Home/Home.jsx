@@ -9,7 +9,6 @@ import { getPokemons } from "../../redux/actions";
 
 
 export default function Home() {
-  const [render,setRender] = useState(false);
   const dispatch=useDispatch();
   useEffect(() => {
       dispatch(getPokemons());
@@ -19,7 +18,7 @@ export default function Home() {
       <a href="https://pokeapi.co/" target="_blank"><img className={style.container} src="/poke.png"/></a>
       <SearchBar />
       <FilterOrder/>
-      <Cards  />
+      <Cards/>
      </div>
   );
 }

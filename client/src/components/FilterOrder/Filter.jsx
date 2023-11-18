@@ -11,7 +11,6 @@ const dispatch = useDispatch();
 
 const handleFilter = (e) =>{
   e.preventDefault();
-  //console.log(e)
 dispatch(filterPokemons(e.target.value));
 
 }

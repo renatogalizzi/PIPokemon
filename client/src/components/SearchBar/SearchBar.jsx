@@ -5,14 +5,13 @@ import style from "./SearchBar.module.css"
 import { Link } from "react-router-dom";
 
 export default function SearchBar() {
-   const pokemons = useSelector((state) => state.allPokemons);
    const dispatch=useDispatch();
    const [nombre,setNombre] = React.useState("");
 
    const handleChange = (event) => {
       setNombre(event.target.value);
    }
-   const handleSearch= (nombre,e)=>{
+   const handleSearch= (nombre)=>{
          dispatch(searchPokemon(nombre))
             setNombre(); 
          }
@@ -24,7 +23,6 @@ export default function SearchBar() {
          }
       }
   
-   
    return (
       <div>
          <input type='search' onKeyPress={handleKeyPress} onChange={handleChange} className={style.input} placeholder="Nombre..." />

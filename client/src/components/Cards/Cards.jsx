@@ -31,7 +31,7 @@ export default function Cards() {
          id={p.id} 
          nombre ={p.nombre}
          imagen={p.imagen}
-         types={p.typePokemons}
+         types={p?.typePokemons}
          /> }): <div className={sty.loading}></div>}
       </DivCards>
       <Pagination pagina={pagina} setPagina={setPagina} maximo={maximo}/>
