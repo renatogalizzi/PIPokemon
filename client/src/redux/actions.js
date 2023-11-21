@@ -4,6 +4,7 @@ export const SEARCH_POKEMON = "SEARCH_POKEMON";
 export const FILTER_POKEMONS = "FILTER_POKEMONS";
 export const CREATE_POKEMONS = "CREATE_POKEMONS";
 export const ORDER_POKEMONS = "ORDER_POKEMONS";
+export const RESET_FILTERS = "RESET_FILTERS";
 
 
 export const getPokemons = () => {
@@ -29,9 +30,12 @@ export const filterPokemons = (type)=>{
 }
 
 
-
 export const orderPokemons = (order) => {
   return {type:ORDER_POKEMONS,payload:order}
+}
+
+export const resetFilters = () => {
+return {type:RESET_FILTERS}
 }
 
 

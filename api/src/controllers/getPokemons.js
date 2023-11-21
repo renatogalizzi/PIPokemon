@@ -16,9 +16,9 @@ const getPokemons = async (req, res) => {
     for (let i=0;i<bbdd.length;i++){
       objPokemons=[...objPokemons,bbdd[i].dataValues];
     }
-    if(name) { 
+    if(name && name != undefined) { 
         let filter = filterQueryPokemons(objPokemons,name);
-        if(Object.keys(filterPokemons).length === 0){
+        if(Object.keys(filter).length === 0){
             return res.status(404).json({message:"No se encontraron Personajes con ese Nombre"})
         }else {
             return res.status(200).json(filter)

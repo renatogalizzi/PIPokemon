@@ -1,4 +1,4 @@
-import {FILTER_POKEMONS, GET_POKEMONS, SEARCH_POKEMON, ORDER_POKEMONS}  from "./actions";
+import {FILTER_POKEMONS, GET_POKEMONS, SEARCH_POKEMON, ORDER_POKEMONS, RESET_FILTERS}  from "./actions";
 
 const initialState = {
   pokemons: [],
@@ -60,6 +60,8 @@ const reducer = (state = initialState, action) => {
       case SEARCH_POKEMON:
         return{...state,allPokemons:action.payload}
       
+      case RESET_FILTERS:
+        return{...state,allPokemons:state.pokemons}
 
   default:
           return {...state};

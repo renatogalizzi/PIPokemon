@@ -1,10 +1,10 @@
 const {Pokemon}=require("../db")
-const { Op } =require("sequelize");
+
 
 
 const filterQueryPokemons = (objPokemons,name) => {
 let filterPokemons = objPokemons.filter(pokemon => pokemon.nombre === name);
-console.log(filterPokemons)
+//console.log(filterPokemons)
  return filterPokemons;
 }
 

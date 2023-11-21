@@ -14,6 +14,7 @@ const createPokemon = async (req, res) => {
       peso,
       types,
     } = req.body;
+    console.log(types)
     if (!nombre || !imagen || !vida || !ataque || !defensa || !types) {throw Error ("Faltan Datos")
   }else {
 const pokemon = await Pokemon.create({  

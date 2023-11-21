@@ -9,10 +9,11 @@ export default function Form() {
   const navigate = useNavigate();
 
   // let type =[];
-  // const handleTypes = (e) => {
-  //   type.push(e.target.value);
+  // const handleTypes =(e) => {
+  //   type.push(Number(e.target.value));
+  //   setPokeData({...pokeData, types:type })
   //   console.log(type);
-  //   return type;
+  //   console.log(pokeData.types)
   // }  
 
   const [pokeData, setPokeData] = useState({
@@ -150,9 +151,9 @@ export default function Form() {
                   name="types"
                   size="6"
                   value={pokeData.types}
-                  multiple
                   className={style.tipos}
                   onChange={handleChange}
+                  multiple
                 >
                   <option value="1">Normal</option>
                   <option value="2">Fighting</option>
